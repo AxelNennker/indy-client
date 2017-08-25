@@ -249,7 +249,7 @@ A link stores when it was last synchronized with the Sovrin network, so we can t
 Alice _attempts_ to accept the invitation from Faber College.
 
 ```
-ALICE> accept invitation from Faber
+ALICE> accept request from Faber
 Expanding Faber to "Faber College"
 Invitation not yet verified.
 Link not yet synchronized.
@@ -273,7 +273,7 @@ Connected to test.
 Alice tries again to accept the invitation from Faber College. This time she succeeds.
 
 ```
-ALICE@test> accept invitation from Faber
+ALICE@test> accept request from Faber
 Expanding Faber to "Faber College"
 Invitation not yet verified.
 Link not yet synchronized.
@@ -309,7 +309,7 @@ Accepting an invitation takes the nonce that Faber College provided, and signs i
 Once the link is accepted and synchronized, Alice inspects it again.
 
 ```
-ALICE@test> show link Faber
+ALICE@test> show connection Faber
 Expanding Faber to "Faber College"
 Link
     Name: Faber College
@@ -460,7 +460,7 @@ ALICE@test> load sample/acme-job-application.sovrin
 Creating Link for Acme Corp.
 
 Try Next:
-    show link "Acme Corp"
+    show connection "Acme Corp"
     accept invitation from "Acme Corp"
 
 
@@ -485,7 +485,7 @@ Try Next:
     accept invitation from "Acme Corp"
 
 
-ALICE@test> accept invitation from Acme
+ALICE@test> accept request from Acme
 Expanding Acme to "Acme Corp"
 Invitation not yet verified.
 Link not yet synchronized.
@@ -607,7 +607,7 @@ It will be interesting to see whether Acme accepts this application with the inf
 Here, we’ll assume the application is accepted, and Alice ends up getting the job. When Alice inspects her link with Acme a week later, she sees that a new claim is available:
 
 ```
-ALICE@test> show link Acme
+ALICE@test> show connection Acme
 Expanding Acme to "Acme Corp"
 Link
     Name: Acme Corp
