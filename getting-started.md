@@ -82,7 +82,7 @@ Next, we will create a new empty keyring for Alice. Creating a new empty keyring
 It's a good habit to get into. Go ahead and create the new keyring now:
 
 ```
-new keyring Alice
+new key Alice
 ```
 
 
@@ -126,14 +126,14 @@ Active keyring set to "Default"
 Creating Link for Faber College.
 
 Try Next:
-    show link "Faber College"
+    show connection "Faber College"
     accept invitation from "Faber College"
 ```
 
 This causes the client to parse and validate the file in addition to displaying more reader friendly text. Alice would now like to know what’s entailed in accepting the invitation.  She types:
 
 ```
-ALICE> show link Faber
+ALICE> show connection Faber
 ```
 
 Unlike the 'show' command for files, this one asks Sovrin to show a link. More details are exposed:
